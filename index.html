@@ -3,114 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Mehndi & Hairstyle Designs</title>
+    <title>Mehndi & Hairstyle Showcase</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header / Navigation -->
     <header>
-        <div class="logo">Mehndi<span>Hairstyle</span></div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mehndi">Mehndi</a></li>
-                <li><a href="#hairstyles">Hairstyles</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <h1>Mehndi & Hair Style</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="gallery.html">All Collections</a>
+                <a href="#shop">Shop</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to Mehndi & Hairstyle Showcase</h1>
-        <p>Explore latest bridal, party Mehndi designs and trendy hairstyles!</p>
-        <a href="#mehndi" class="btn">View Designs</a>
+    <!-- 1. FIRST PAGE / INTRODUCTION SECTION (Hero Section) -->
+    <section class="hero" style="text-align: center; padding: 60px 20px; background: #fff5f8;">
+        <h2 style="font-size: 32px; color: #800020; margin-bottom: 15px;">Welcome to Mehndi & Hairstyle Showcase</h2>
+        <p style="font-size: 18px; color: #555; max-width: 700px; margin: 0 auto 25px;">
+            Aapki apni digital gallery jahan aapko milenge latest bridal, simple aur arabic mehndi designs ke sath-sath trendy hairstyles ke behtareen ideas. Shaadi ho ya koi party, yahan se chunen apne liye sabse khoobsurat look!
+        </p>
+        <a href="gallery.html" class="btn" style="background: #800020; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Explore All Designs Gallery</a>
     </section>
 
-    <!-- Google AdSense Placeholder 1 -->
-    <div class="ad-space">
-        <p>-- Advertisement (Google AdSense Code Yahan Aayega) --</p>
-    </div>
-
-    <!-- ================= MEHNDI SECTION ================= -->
-    <section id="mehndi" class="gallery-section">
-        <h2>Mehndi Collections</h2>
-
-        <!-- 1. Simple Mehndi (1 to 5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Simple Mehndi Designs</h3>
-        <div class="gallery">
-            <div class="card"><img src="mehndiapp/simple/1.jpg" alt="Simple 1"><h3>Simple 1</h3></div>
-            <div class="card"><img src="mehndiapp/simple/2.jpg" alt="Simple 2"><h3>Simple 2</h3></div>
-            <div class="card"><img src="mehndiapp/simple/3.jpg" alt="Simple 3"><h3>Simple 3</h3></div>
-            <div class="card"><img src="mehndiapp/simple/4.jpg" alt="Simple 4"><h3>Simple 4</h3></div>
-            <div class="card"><img src="mehndiapp/simple/5.jpg" alt="Simple 5"><h3>Simple 5</h3></div>
+    <!-- Featured / Attraction Section (Sirf 1 ya 2 Best Pics) -->
+    <section style="padding: 40px 20px; text-align: center;">
+        <h2 style="color: #333; margin-bottom: 20px;">Trending Highlight</h2>
+        <p style="color: #666; margin-bottom: 30px;">Hamari sab se pasandida aur trending design ki jhalak:</p>
+        
+        <div class="gallery" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <!-- Best Bridal Mehndi Pic -->
+            <div class="card" style="max-width: 300px;">
+                <img src="mehndiapp/bridal/bridal 1.jpg" alt="Featured Bridal Mehndi" style="width: 100%; border-radius: 8px;">
+                <h3 style="margin-top: 10px; color: #800020;">Best Bridal Mehndi</h3>
+            </div>
+            <!-- Best Open Hair Pic -->
+            <div class="card" style="max-width: 300px;">
+                <img src="hairstyle/open/1.jpg" alt="Featured Hairstyle" style="width: 100%; border-radius: 8px;">
+                <h3 style="margin-top: 10px; color: #800020;">Trending Hairstyle</h3>
+            </div>
         </div>
 
-        <!-- 2. Bridal Mehndi (bridal1 to bridal5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Bridal Mehndi Designs</h3>
-        <div class="gallery">
-            <div class="card"><img src="mehndiapp/bridal/bridal 1.jpg" alt="Bridal 1"><h3>Bridal 1</h3></div>
-            <div class="card"><img src="mehndiapp/bridal/bridal 2.jpg" alt="Bridal 2"><h3>Bridal 2</h3></div>
-            <div class="card"><img src="mehndiapp/bridal/bridal 3.jpg" alt="Bridal 3"><h3>Bridal 3</h3></div>
-            <div class="card"><img src="mehndiapp/bridal/bridal 4.jpg" alt="Bridal 4"><h3>Bridal 4</h3></div>
-            <div class="card"><img src="mehndiapp/bridal/bridal 5.jpg" alt="Bridal 5"><h3>Bridal 5</h3></div>
-        </div>
-
-        <!-- 3. Arabic Mehndi (1 to 5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Arabic Mehndi Designs</h3>
-        <div class="gallery">
-            <div class="card"><img src="mehndiapp/arabic/1.jpg" alt="Arabic 1"><h3>Arabic 1</h3></div>
-            <div class="card"><img src="mehndiapp/arabic/2.jpg" alt="Arabic 2"><h3>Arabic 2</h3></div>
-            <div class="card"><img src="mehndiapp/arabic/3.jpg" alt="Arabic 3"><h3>Arabic 3</h3></div>
-            <div class="card"><img src="mehndiapp/arabic/4.jpg" alt="Arabic 4"><h3>Arabic 4</h3></div>
-            <div class="card"><img src="mehndiapp/arabic/5.jpg" alt="Arabic 5"><h3>Arabic 5</h3></div>
+        <div style="margin-top: 35px;">
+            <a href="gallery.html" style="color: #800020; font-weight: bold; font-size: 18px; text-decoration: underline;">Saari collections dekhne ke liye yahan click karein &rarr;</a>
         </div>
     </section>
-
-    <!-- ================= HAIRSTYLE SECTION ================= -->
-    <section id="hairstyles" class="gallery-section">
-        <h2>Hairstyle Collections</h2>
-
-        <!-- 1. Bridal Hairstyle (1 to 5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Bridal Hairstyles</h3>
-        <div class="gallery">
-            <div class="card"><img src="hairstyle/bridal/1.jpg" alt="Bridal Hair 1"><h3>Bridal Hair 1</h3></div>
-            <div class="card"><img src="hairstyle/bridal/2.jpg" alt="Bridal Hair 2"><h3>Bridal Hair 2</h3></div>
-            <div class="card"><img src="hairstyle/bridal/3.jpg" alt="Bridal Hair 3"><h3>Bridal Hair 3</h3></div>
-            <div class="card"><img src="hairstyle/bridal/4.jpg" alt="Bridal Hair 4"><h3>Bridal Hair 4</h3></div>
-            <div class="card"><img src="hairstyle/bridal/5.jpg" alt="Bridal Hair 5"><h3>Bridal Hair 5</h3></div>
-        </div>
-
-        <!-- 2. Open Hairstyle (1 to 5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Open Hairstyles</h3>
-        <div class="gallery">
-            <div class="card"><img src="hairstyle/open/1.jpg" alt="Open Hair 1"><h3>Open Hair 1</h3></div>
-            <div class="card"><img src="hairstyle/open/2.jpg" alt="Open Hair 2"><h3>Open Hair 2</h3></div>
-            <div class="card"><img src="hairstyle/open/3.jpg" alt="Open Hair 3"><h3>Open Hair 3</h3></div>
-            <div class="card"><img src="hairstyle/open/4.jpg" alt="Open Hair 4"><h3>Open Hair 4</h3></div>
-            <div class="card"><img src="hairstyle/open/5.jpg" alt="Open Hair 5"><h3>Open Hair 5</h3></div>
-        </div>
-
-        <!-- 3. Simple Hairstyle (1 to 5) -->
-        <h3 style="color: #800020; margin: 25px 0 10px; text-align: left; border-bottom: 2px solid #800020; padding-bottom: 5px;">Simple Hairstyles</h3>
-        <div class="gallery">
-            <div class="card"><img src="hairstyle/simple/1.jpg" alt="Simple Hair 1"><h3>Simple Hair 1</h3></div>
-            <div class="card"><img src="hairstyle/simple/2.jpg" alt="Simple Hair 2"><h3>Simple Hair 2</h3></div>
-            <div class="card"><img src="hairstyle/simple/3.jpg" alt="Simple Hair 3"><h3>Simple Hair 3</h3></div>
-            <div class="card"><img src="hairstyle/simple/4.jpg" alt="Simple Hair 4"><h3>Simple Hair 4</h3></div>
-            <div class="card"><img src="hairstyle/simple/5.jpg" alt="Simple Hair 5"><h3>Simple Hair 5</h3></div>
-        </div>
-    </section>
-
-    <!-- Google AdSense Placeholder 2 -->
-    <div class="ad-space">
-        <p>-- Advertisement (Google AdSense Code Yahan Aayega) --</p>
-    </div>
 
     <!-- Shop / Affiliate Products -->
-    <section id="shop" class="shop-section">
+    <section id="shop" class="shop-section" style="padding: 40px 20px; background: #fafafa;">
         <h2>Recommended Products (Shop & Buy)</h2>
         <p>Aap hamaray pasandida Mehndi cones aur hair accessories yahan se khareed sakti hain:</p>
         <div class="gallery">
@@ -128,7 +72,7 @@
     </section>
 
     <!-- Contact & Booking Form -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" style="padding: 40px 20px;">
         <h2>Book Appointment / Contact Us</h2>
         <form id="contactForm">
             <input type="text" placeholder="Aapka Naam" required>
