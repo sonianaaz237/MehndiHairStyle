@@ -1,3 +1,4 @@
+/* --- Global Reset & Box Sizing --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +6,45 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #fdf8f5;
     color: #333;
     line-height: 1.6;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    -webkit-text-size-adjust: 100%;
 }
 
-/* Header & Nav */
-/* Header Main Style */
+/* iPhone Notch & Safe Area Fix */
+body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+/* Container safety to prevent horizontal overflow */
+div, section, header, footer, img {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+img {
+    height: auto;
+    display: block;
+}
+
+/* --- Header & Nav --- */
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav-container {
@@ -31,17 +57,17 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo / Title */
 header h1 {
     font-size: 22px;
     color: #333;
     margin: 0;
 }
 
-/* Navigation Links */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 nav a {
@@ -56,48 +82,13 @@ nav a:hover {
     color: #ff4081;
 }
 
-/* Mobile Responsive Code */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        padding-top: 10px;
-        border-top: 1px solid #eee;
-    }
-}
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav ul li a:hover {
-    color: #f3a847;
-}
-
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     text-align: center;
     padding: 60px 20px;
     background: linear-gradient(rgba(128, 0, 32, 0.8), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x400');
     background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -123,7 +114,7 @@ nav ul li a:hover {
     background: #e09332;
 }
 
-/* Ad Spaces */
+/* --- Ad Spaces --- */
 .ad-space {
     background: #eee;
     border: 2px dashed #ccc;
@@ -134,7 +125,7 @@ nav ul li a:hover {
     color: #666;
 }
 
-/* Gallery & Cards */
+/* --- Gallery & Cards --- */
 .gallery-section, .shop-section, .contact-section {
     padding: 40px 20px;
     max-width: 1100px;
@@ -148,10 +139,11 @@ nav ul li a:hover {
 }
 
 .gallery {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     margin-bottom: 30px;
+    width: 100% !important;
 }
 
 .card {
@@ -160,6 +152,7 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    width: 100%;
 }
 
 .card img {
@@ -185,7 +178,7 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
-/* Contact Form */
+/* --- Contact Form --- */
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -198,46 +191,43 @@ nav ul li a:hover {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 30px;
-}/* Responsive Image & Card Styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-.card {
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* Mobile Media Query */
+/* --- Mobile Responsive Media Query --- */
 @media (max-width: 768px) {
-    body {
-        padding: 0 10px;
-    }
-    
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+        gap: 10px;
+        padding: 5px;
     }
 
     .hero h1 {
@@ -247,45 +237,4 @@ img {
     .hero p {
         font-size: 14px;
     }
-}/* iPhone Notch & Foldable Screen Fix */
-body {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-}
-
-html {
-    height: -webkit-fill-available;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* Container overflow reset */
-body, header, section, footer, .gallery-section {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-}/* --- Ultimate Fix for Left-Right Overflow --- */
-html, body {
-    width: 100% !important;
-    overflow-x: hidden !important;
-    position: relative !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Sab containers ko screen ke andar rakhne ke liye */
-div, section, header, footer, img {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Gallery grid ko screen se bahar jaane se rokne ke liye */
-.gallery {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 10px !important;
 }
