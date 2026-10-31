@@ -12,27 +12,67 @@ body {
 }
 
 /* Header & Nav */
+/* Header Main Style */
 header {
-    background: #800020;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header .logo span {
-    color: #f3a847;
+/* Logo / Title */
+header h1 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
 }
 
+/* Navigation Links */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4081;
+}
+
+/* Mobile Responsive Code */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+}
 nav ul {
     display: flex;
     list-style: none;
